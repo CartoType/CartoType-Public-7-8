@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/file" android:title="File">
+        <menu>
+            <item android:id="@+id/file_open_builtin" android:title="Open Map in private folder"/>
+            <item android:id="@+id/file_open_app" android:title="Open Map in .../Android/data/com.cartotype.cartotypemaps..."/>
+            <item android:id="@+id/file_open_doc" android:title="Open Map in .../Documents/CartoType/maps..."/>
+        </menu>
+    </item>
+    <item android:id="@+id/find" android:title="Find">
+        <menu>
+            <item android:id="@+id/find_find" android:title="Find..."/>
+            <item android:id="@+id/find_address" android:title="Find Address..."/>
+            <item android:id="@+id/find_ignore_symbols" android:title="Ignore Symbols" android:checkable="true" android:checked="true"/>
+            <item android:id="@+id/find_fuzzy" android:title="Fuzzy Search" android:checkable="true" android:checked="false"/>
+        </menu>
+    </item>
+    <item android:id="@+id/view" android:title="View">
+        <menu>
+            <item android:id="@+id/view_track_location" android:title="Track Location" android:checkable="true"/>
+            <item android:id="@+id/view_scale" android:title="Scale Bar" android:checkable="true"/>
+            <item android:id="@+id/view_north_up" android:title="North Up"/>
+            <item android:id="@+id/view_perspective" android:title="Perspective View" android:checkable="true"/>
+            <item android:id="@+id/view_metric" android:title="Metric Units" android:checkable="true"/>
+            <item android:id="@+id/view_3d_buildings" android:title="3D Buildings" android:checkable="true"/>
+            <item android:id="@+id/view_night_mode" android:title="Night Mode" android:checkable="true"/>
+        </menu>
+    </item>
+    <item android:id="@+id/route" android:title="Route">
+        <menu>
+            <group android:id="@+id/route_navigate_group">
+                <item android:id="@+id/route_navigate" android:title="Navigate Route" android:enabled="false" android:checkable="true" android:checked="false"/>
+                <item android:id="@+id/route_from_here" android:title="Route from Here" android:enabled="false"/>
+                <item android:id="@+id/route_reverse" android:title="Reverse Route" android:enabled="false"/>
+                <item android:id="@+id/route_delete" android:title="Delete Route" android:enabled="false"/>
+            </group>
+            <group android:id="@+id/route_profile_type_group" android:checkableBehavior="single">
+                <item android:id="@+id/route_drive" android:title="Drive" android:checked="true"/>
+                <item android:id="@+id/route_cycle" android:title="Cycle"/>
+                <item android:id="@+id/route_walk" android:title="Walk"/>
+                <item android:id="@+id/route_hike" android:title="Hike"/>
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/help" android:title="Help">
+        <menu>
+            <item android:id="@+id/help_about" android:title="About CartoType Maps..."/>
+        </menu>
+    </item>
+</menu>

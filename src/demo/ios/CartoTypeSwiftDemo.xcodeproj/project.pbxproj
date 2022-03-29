@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF13073E265D31BE009BFBE6 /* CartoType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13073C265D31BE009BFBE6 /* CartoType.framework */; };
+		BF13073F265D31BE009BFBE6 /* MetalANGLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13073D265D31BE009BFBE6 /* MetalANGLE.framework */; };
+		BF130740265D31CF009BFBE6 /* CartoType.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF13073C265D31BE009BFBE6 /* CartoType.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF130741265D31CF009BFBE6 /* MetalANGLE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF13073D265D31BE009BFBE6 /* MetalANGLE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF35B06E1DEDD5AB0016D835 /* santa-cruz.ctm1 in Resources */ = {isa = PBXBuildFile; fileRef = BF35B06D1DEDD5AB0016D835 /* santa-cruz.ctm1 */; };
+		BF3A33E6216524E500D99379 /* standard.ctstyle in Resources */ = {isa = PBXBuildFile; fileRef = BF3A33E5216524E500D99379 /* standard.ctstyle */; };
+		BF3A33E82165250100D99379 /* DejaVuSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF3A33E72165250100D99379 /* DejaVuSans.ttf */; };
+		BF3EF8A02227EB2B00745FA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EF89F2227EB2B00745FA0 /* ViewController.swift */; };
+		BF728A0B1DE1CDC5003219F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF728A0A1DE1CDC4003219F0 /* AppDelegate.swift */; };
+		BF728A101DE1CDC5003219F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF728A0E1DE1CDC5003219F0 /* Main.storyboard */; };
+		BF728A121DE1CDC5003219F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF728A111DE1CDC5003219F0 /* Assets.xcassets */; };
+		BF728A151DE1CDC5003219F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF728A131DE1CDC5003219F0 /* LaunchScreen.storyboard */; };
+		BFE6E6921DE3705C00ECF6EF /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE6E6911DE3705C00ECF6EF /* libc++.1.tbd */; };
+		BFEA7B632632D866007FCE0D /* DejaVuSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF72841E255C37B3004C8092 /* DejaVuSans-Bold.ttf */; };
+		BFEA7B642632D866007FCE0D /* DejaVuSerif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF72841F255C37C4004C8092 /* DejaVuSerif.ttf */; };
+		BFEA7B652632D866007FCE0D /* DejaVuSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF728420255C37D8004C8092 /* DejaVuSerif-Italic.ttf */; };
+		BFEA7B68263B0ECF007FCE0D /* marches.ctm1 in Resources */ = {isa = PBXBuildFile; fileRef = BFEA7B67263B0ECF007FCE0D /* marches.ctm1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BFF7AB542615D7F30059CDBF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF130740265D31CF009BFBE6 /* CartoType.framework in Embed Frameworks */,
+				BF130741265D31CF009BFBE6 /* MetalANGLE.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BF13073C265D31BE009BFBE6 /* CartoType.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoType.framework; sourceTree = "<group>"; };
+		BF13073D265D31BE009BFBE6 /* MetalANGLE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MetalANGLE.framework; sourceTree = "<group>"; };
+		BF35B06D1DEDD5AB0016D835 /* santa-cruz.ctm1 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "santa-cruz.ctm1"; path = "../../test/data/ctm1/santa-cruz.ctm1"; sourceTree = "<group>"; };
+		BF3A33E5216524E500D99379 /* standard.ctstyle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = standard.ctstyle; path = ../../../style/standard.ctstyle; sourceTree = "<group>"; };
+		BF3A33E72165250100D99379 /* DejaVuSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DejaVuSans.ttf; path = ../../../font/DejaVuSans.ttf; sourceTree = "<group>"; };
+		BF3EF89F2227EB2B00745FA0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF72841E255C37B3004C8092 /* DejaVuSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DejaVuSans-Bold.ttf"; path = "../../../font/DejaVuSans-Bold.ttf"; sourceTree = "<group>"; };
+		BF72841F255C37C4004C8092 /* DejaVuSerif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DejaVuSerif.ttf; path = ../../../font/DejaVuSerif.ttf; sourceTree = "<group>"; };
+		BF728420255C37D8004C8092 /* DejaVuSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DejaVuSerif-Italic.ttf"; path = "../../../font/DejaVuSerif-Italic.ttf"; sourceTree = "<group>"; };
+		BF728A071DE1CDC4003219F0 /* CartoTypeSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoTypeSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF728A0A1DE1CDC4003219F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF728A0F1DE1CDC5003219F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF728A111DE1CDC5003219F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF728A141DE1CDC5003219F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF728A161DE1CDC5003219F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF728A201DE23048003219F0 /* CartoTypeSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CartoTypeSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFE6E6911DE3705C00ECF6EF /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		BFEA7B67263B0ECF007FCE0D /* marches.ctm1 */ = {isa = PBXFileReference; lastKnownFileType = file; name = marches.ctm1; path = ../../../../ctm1/marches.ctm1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF728A041DE1CDC4003219F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF13073E265D31BE009BFBE6 /* CartoType.framework in Frameworks */,
+				BF13073F265D31BE009BFBE6 /* MetalANGLE.framework in Frameworks */,
+				BFE6E6921DE3705C00ECF6EF /* libc++.1.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF35B0681DEDD4CA0016D835 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFEA7B67263B0ECF007FCE0D /* marches.ctm1 */,
+				BF35B06D1DEDD5AB0016D835 /* santa-cruz.ctm1 */,
+				BF3A33E5216524E500D99379 /* standard.ctstyle */,
+				BF3A33E72165250100D99379 /* DejaVuSans.ttf */,
+				BF72841E255C37B3004C8092 /* DejaVuSans-Bold.ttf */,
+				BF72841F255C37C4004C8092 /* DejaVuSerif.ttf */,
+				BF728420255C37D8004C8092 /* DejaVuSerif-Italic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BF7289FE1DE1CDC3003219F0 = {
+			isa = PBXGroup;
+			children = (
+				BF13073C265D31BE009BFBE6 /* CartoType.framework */,
+				BF13073D265D31BE009BFBE6 /* MetalANGLE.framework */,
+				BFE6E6911DE3705C00ECF6EF /* libc++.1.tbd */,
+				BF728A201DE23048003219F0 /* CartoTypeSwiftDemo-Bridging-Header.h */,
+				BF728A091DE1CDC4003219F0 /* CartoTypeSwiftDemo */,
+				BF35B0681DEDD4CA0016D835 /* Resources */,
+				BF728A081DE1CDC4003219F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF728A081DE1CDC4003219F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF728A071DE1CDC4003219F0 /* CartoTypeSwiftDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF728A091DE1CDC4003219F0 /* CartoTypeSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BF728A0A1DE1CDC4003219F0 /* AppDelegate.swift */,
+				BF3EF89F2227EB2B00745FA0 /* ViewController.swift */,
+				BF728A0E1DE1CDC5003219F0 /* Main.storyboard */,
+				BF728A111DE1CDC5003219F0 /* Assets.xcassets */,
+				BF728A131DE1CDC5003219F0 /* LaunchScreen.storyboard */,
+				BF728A161DE1CDC5003219F0 /* Info.plist */,
+			);
+			path = CartoTypeSwiftDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF728A061DE1CDC4003219F0 /* CartoTypeSwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF728A191DE1CDC5003219F0 /* Build configuration list for PBXNativeTarget "CartoTypeSwiftDemo" */;
+			buildPhases = (
+				BF728A031DE1CDC4003219F0 /* Sources */,
+				BF728A041DE1CDC4003219F0 /* Frameworks */,
+				BF728A051DE1CDC4003219F0 /* Resources */,
+				BFF7AB542615D7F30059CDBF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CartoTypeSwiftDemo;
+			productName = CartoTypeSwiftDemo;
+			productReference = BF728A071DE1CDC4003219F0 /* CartoTypeSwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF7289FF1DE1CDC3003219F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Graham Asher";
+				TargetAttributes = {
+					BF728A061DE1CDC4003219F0 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Q566457U5C;
+						LastSwiftMigration = 1110;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BF728A021DE1CDC3003219F0 /* Build configuration list for PBXProject "CartoTypeSwiftDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF7289FE1DE1CDC3003219F0;
+			productRefGroup = BF728A081DE1CDC4003219F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF728A061DE1CDC4003219F0 /* CartoTypeSwiftDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF728A051DE1CDC4003219F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF728A151DE1CDC5003219F0 /* LaunchScreen.storyboard in Resources */,
+				BF728A101DE1CDC5003219F0 /* Main.storyboard in Resources */,
+				BF728A121DE1CDC5003219F0 /* Assets.xcassets in Resources */,
+				BF3A33E82165250100D99379 /* DejaVuSans.ttf in Resources */,
+				BFEA7B68263B0ECF007FCE0D /* marches.ctm1 in Resources */,
+				BFEA7B632632D866007FCE0D /* DejaVuSans-Bold.ttf in Resources */,
+				BFEA7B642632D866007FCE0D /* DejaVuSerif.ttf in Resources */,
+				BFEA7B652632D866007FCE0D /* DejaVuSerif-Italic.ttf in Resources */,
+				BF35B06E1DEDD5AB0016D835 /* santa-cruz.ctm1 in Resources */,
+				BF3A33E6216524E500D99379 /* standard.ctstyle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF728A031DE1CDC4003219F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3EF8A02227EB2B00745FA0 /* ViewController.swift in Sources */,
+				BF728A0B1DE1CDC5003219F0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF728A0E1DE1CDC5003219F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF728A0F1DE1CDC5003219F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF728A131DE1CDC5003219F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF728A141DE1CDC5003219F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF728A171DE1CDC5003219F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF728A181DE1CDC5003219F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF728A1A1DE1CDC5003219F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = Q566457U5C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CartoTypeSwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CartoType.CartoTypeSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CartoTypeSwiftDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BF728A1B1DE1CDC5003219F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = Q566457U5C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CartoTypeSwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CartoType.CartoTypeSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CartoTypeSwiftDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF728A021DE1CDC3003219F0 /* Build configuration list for PBXProject "CartoTypeSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF728A171DE1CDC5003219F0 /* Debug */,
+				BF728A181DE1CDC5003219F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF728A191DE1CDC5003219F0 /* Build configuration list for PBXNativeTarget "CartoTypeSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF728A1A1DE1CDC5003219F0 /* Debug */,
+				BF728A1B1DE1CDC5003219F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF7289FF1DE1CDC3003219F0 /* Project object */;
+}

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AttributeDialog</class>
+ <widget class="QDialog" name="AttributeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>732</width>
+    <height>553</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Edit Attributes</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>691</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="elementName">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="text01"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="text02"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="text03"/>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="text04"/>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="text05"/>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="text06"/>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="text07"/>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLineEdit" name="text08"/>
+      </item>
+      <item row="8" column="1">
+       <widget class="QLineEdit" name="text09"/>
+      </item>
+      <item row="9" column="1">
+       <widget class="QLineEdit" name="text10"/>
+      </item>
+      <item row="10" column="1">
+       <widget class="QLineEdit" name="text11"/>
+      </item>
+      <item row="11" column="1">
+       <widget class="QLineEdit" name="text12"/>
+      </item>
+      <item row="12" column="1">
+       <widget class="QLineEdit" name="text13"/>
+      </item>
+      <item row="13" column="1">
+       <widget class="QLineEdit" name="text14"/>
+      </item>
+      <item row="14" column="1">
+       <widget class="QLineEdit" name="text15"/>
+      </item>
+      <item row="15" column="1">
+       <widget class="QLineEdit" name="text16"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="name01"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="name02"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLineEdit" name="name03"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLineEdit" name="name04"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLineEdit" name="name05"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLineEdit" name="name06"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLineEdit" name="name07"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLineEdit" name="name08"/>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLineEdit" name="name09"/>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLineEdit" name="name10"/>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLineEdit" name="name11"/>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLineEdit" name="name12"/>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLineEdit" name="name13"/>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLineEdit" name="name14"/>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLineEdit" name="name15"/>
+      </item>
+      <item row="15" column="0">
+       <widget class="QLineEdit" name="name16"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pickColorButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Pick Color...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QDialogButtonBox" name="buttonBox">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="standardButtons">
+         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>AttributeDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>AttributeDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,3 @@
+include ':cartotype'
+include ':app'
+rootProject.name = "CartoType Maps"

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>CT_Arrow-RGB-256x256.png</file>
+    </qresource>
+</RCC>
