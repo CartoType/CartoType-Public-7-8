@@ -538,8 +538,7 @@ class TTextParam
     public:
     TTextParam():
         iTraversePathBackwards(false),
-        iCopyFit(false),
-        iRoundAdvances(false)
+        iCopyFit(false)
         {
         }
 
@@ -613,11 +612,6 @@ class TTextParam
     by adding letter spacing and word spacing.
     */
     bool iCopyFit : 1;
-    /**
-    Round advances to integer values, which is normally
-    done if drawing horizontally or vertically, to maximise glyph cache hits.
-    */
-    bool iRoundAdvances : 1;
     };
 
 /**

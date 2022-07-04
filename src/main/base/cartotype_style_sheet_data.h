@@ -38,6 +38,8 @@ class CStyleSheetData
     const std::string& FileName() const { return iFileName; }
     /** Returns the text of this style sheet data. */
     const std::string& Text() const { return iText; }
+    /** Returns true if the style sheet data is empty, which means there is no text and no filename. */
+    bool IsEmpty() const { return iText.empty() && iFileName.empty(); }
 
     private:
     std::string iText;

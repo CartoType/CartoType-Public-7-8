@@ -1,6 +1,6 @@
 /*
 cartotype_base.h
-Copyright (C) 2004-2021 CartoType Ltd.
+Copyright (C) 2004-2022 CartoType Ltd.
 See www.cartotype.com for more information.
 */
 
@@ -1098,9 +1098,10 @@ inline void WriteBigEndian(int16_t* aP,int16_t aValue)
 /**
 Uses bilinear interpolation to get the value at (aX,aY) from a rectangular table of data.
 Each data item has aChannels channels, and each channel takes up aWidth * sizeof(DataType) bytes.
-The UnknownValue is ignored when interpolating.
+The value aUnknownValue is ignored when interpolating.
 */
-template<class DataType,int32_t UnknownValue = INT32_MIN> double InterpolatedValue(const DataType* aDataStart,int32_t aWidth,int32_t aHeight,int32_t aStride,int32_t aChannels,double aX,double aY,int aChannel)
+template<class DataType> double InterpolatedValue(const DataType* aDataStart,int32_t aWidth,int32_t aHeight,int32_t aStride,int32_t aChannels,
+                                                  double aX,double aY,int aChannel,int32_t aUnknownValue)
     {
     double x_fraction = 1 - (aX - std::floor(aX));
     if ((int)aX == aWidth - 1)
@@ -1113,21 +1114,21 @@ template<class DataType,int32_t UnknownValue = INT32_MIN> double InterpolatedVal
     if (x_fraction < 1)
         {
         double top_right_value = ReadBigEndian(aDataStart + index + aChannels);
-        if (top_right_value != UnknownValue)
+        if (top_right_value != aUnknownValue)
             top_value = top_value * x_fraction + top_right_value * (1.0 - x_fraction);
         }
     double value = top_value;
-    if (y_fraction < 1)
+    if (y_fraction < 1 && value != aUnknownValue)
         {
         index += aStride * aChannels;
         double bottom_value = ReadBigEndian(aDataStart + index);
         if (x_fraction < 1)
             {
             double bottom_right_value = ReadBigEndian(aDataStart + index + aChannels);
-            if (bottom_right_value != UnknownValue)
+            if (bottom_right_value != aUnknownValue)
                 bottom_value = bottom_value * x_fraction + bottom_right_value * (1.0 - x_fraction);
             }
-        if (bottom_value != UnknownValue)
+        if (bottom_value != aUnknownValue)
             value = top_value * y_fraction + bottom_value * (1.0 - y_fraction);
         }
     return value;

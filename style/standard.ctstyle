@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <!--
-Copyright (C) 2020-2021 CartoType Ltd.
+Copyright (C) 2020-2022 CartoType Ltd.
 For more information see http://www.cartotype.com.
 -->
 
@@ -230,6 +230,8 @@ For more information see http://www.cartotype.com.
             <highlight distance='6m@6000_30m@40000' fill='~color~' width='1.5m@6000_18m@40000,1.5pt'/>
             <highlight distance='-6m@6000_-30m@40000' fill='~color~' width='1.5m@6000_18m@40000,1.5pt'/>
             <line fill='none' width='8m@6000_50m@40000,1.5pt'/>
+            <label priority='-9' case='lower' color='~color~+grey' font-size='20m,8pt,12pt' glow='white' position='horizontal'
+                   labelFormat='{[padding:20%,0.6pt;background-color:#FFFFFFC0;border-color:~color~+grey;border-width:12%,0.7;border-radius:50%,1.2pt}_route:distance"&#10;"_route:time{]}'/>
         </macro>
         <macro id='traffic-highlight'>
             <condition exp='(Type bitand 0xFF) le ~maxspeed~'>
@@ -302,7 +304,7 @@ For more information see http://www.cartotype.com.
     <layer name='image'>
         <shape fill='white'/>
     </layer>
-    <scale min='20000'>
+    <scale min='1000'>
         <layer name='terrain-height-feet'>
             <shape fill='url(#terrain-feet-height-ramp)'/>
         </layer>
@@ -629,8 +631,24 @@ For more information see http://www.cartotype.com.
             </condition>
         </layer>
     </scale>
-    <scale max='40000'>
+    <scale max='400000'>
+        <layer name='aerialway' roadflags='#1F001'>
+            <condition exp='@=0 and OsmType = "ast"'>
+                <icon ref='station-icon'/>
+                <label case='assume-title' color='red+black+white' font-size='75%,5pt,18pt' glow='white' glowWidth='7%,0.5pt'/>
+            </condition>
+            <condition exp='@=1'>
+                <line fill='red+black+white' width='3m,0.6pt'/>
+                <scale max='7500'>
+                    <label case='assume-title' color='dimgrey' font-size='75%,5pt,18pt' glow='white' glowWidth='7%,0.5pt'/>
+                    <macro ref='standard-bridge'/>
+                    <macro ref='standard-tunnel'/>
+                </scale>
+            </condition>
+        </layer>
+    </scale>
         <layer name='path' roadflags='#1F001'>
+            <scale max='40000'>
             <condition exp='OsmType in { "foo","wlk","hik" }'>
                 <line dashArray='2,2' fill='orange' width='1m,0.3pt'/>
                 <label case='assume-title' color='dimgrey' font-size='75%,5pt,18pt' font-style='italic' glow='white' glowWidth='7%,0.5pt'/>
@@ -638,11 +656,6 @@ For more information see http://www.cartotype.com.
             </condition>
             <condition exp='OsmType=="bri"'>
                 <line dashArray='4,2' fill='orange' width='1.5m,0.5pt'/>
-                <label case='assume-title' color='dimgrey' font-size='75%,5pt,18pt' font-style='italic' glow='white' glowWidth='7%,0.5pt'/>
-                <macro ref='standard-bridge'/>
-            </condition>
-            <condition exp='OsmType=="ski"'>
-                <line dashArray='4,2' fill='ncsred' width='1.5m,0.5pt'/>
                 <label case='assume-title' color='dimgrey' font-size='75%,5pt,18pt' font-style='italic' glow='white' glowWidth='7%,0.5pt'/>
                 <macro ref='standard-bridge'/>
             </condition>
@@ -657,7 +670,34 @@ For more information see http://www.cartotype.com.
                 <macro ref='standard-bridge'/>
                 <oneWayArrow fill='ncsblue' gap='1900' isLabel='yes' opacity='0.5' path='#arrow' unitsPerLineWidth='100'/>
             </condition>
+            </scale>
+            <scale max='100000'>
+            <condition exp='OsmType=="ski" and piste:type="downhill"'>
+                <label case='assume-title' color='dimgrey' font-size='75%,5pt,18pt' font-style='italic' glow='white' glowWidth='7%,0.5pt'/>
+                <line dashArray='4,2' fill='ncsred' width='1.5m,0.5pt'/>
+                <macro ref='standard-bridge'/>
+                <condition exp='piste:difficulty=="novice"'>
+                    <line dashArray='4,2' fill='ncsgreen' width='1.5m,0.5pt'/>
+                </condition>
+                <condition exp='piste:difficulty=="easy"'>
+                    <line dashArray='4,2' fill='ncsblue' width='1.5m,0.5pt'/>
+                </condition>
+                <condition exp='piste:difficulty=="intermediate"'>
+                    <line dashArray='4,2' fill='ncsred' width='1.5m,0.5pt'/>
+                </condition>
+                <condition exp='piste:difficulty=="advanced"'>
+                    <line dashArray='4,2' fill='black' width='1.5m,0.5pt'/>
+                </condition>
+                <condition exp='piste:difficulty=="expert"'>
+                    <line dashArray='4,2' fill='black' width='1.5m,0.5pt'/>
+                </condition>
+                <condition exp='piste:difficulty=="freeride"'>
+                    <line dashArray='4,2' fill='yellow' width='1.5m,0.5pt'/>
+                </condition>
+            </condition>
+            </scale>
         </layer>
+    <scale max='40000'>
         <layer name='routerelation'>
             <label case='assume-title' color='dimgrey' font-size='75%,5pt,18pt' font-style='italic' glow='white' glowWidth='7%,0.5pt'/>
         </layer>
@@ -843,23 +883,31 @@ For more information see http://www.cartotype.com.
         </layer>
     </scale>
     <layer name='route' roadflags='#F000'>
-        <condition exp='!$ or $==0'>
-            <macro color='ncsred+0.3yellow' ref='route-highlight'/>
+        <condition exp='_route:profile_name!="cycle" and _route:profile_name!="walk" and _route:profile_name!="hike"'>
+            <macro ref='route-highlight' color='ncsred+0.3yellow'/>
         </condition>
-        <condition exp='$==1'>
-            <macro color='ncsblue' ref='route-highlight'/>
+        <condition exp='_route:profile_name=="cycle"'>
+            <macro ref='route-highlight' color='ncsblue'/>
         </condition>
-        <condition exp='$ gt 1'>
-            <macro color='ncsgreen' ref='route-highlight'/>
+        <condition exp='_route:profile_name=="walk" || _route:profile_name=="hike"'>
+            <macro ref='route-highlight' color='ncsgreen'/>
         </condition>
     </layer>
     <layer name='waypoint' roadflags='#F000'>
-        <label baseline='central-caps' color='grey+orange' font-size='20m@6000_90m@40000,7pt,12pt' labelFormat='{[padding:20%,0.6pt;background-color:#FFFFFFC0;border-color:orange+grey;border-width:12%,0.7;border-radius:50%,1.2pt};{]}' position='point' priority='-21' wrapLines='0' wrapWidth='30em'/>
+        <label baseline='central-caps' color='grey+orange' font-size='20m@6000_90m@40000,7pt,12pt' labelFormat='{[padding:20%,0.6pt;background-color:#FFFFFFC0;border-color:orange+grey;border-width:12%,0.7;border-radius:50%,1.2pt};" "_route:waypoint_number{]}' position='point' priority='-21' wrapLines='0' wrapWidth='30em'/>
     </layer>
     <layer name='route-vector' roadflags='#F000'>
-        <line width='27m@6000_180m@40000,18pt'/>
         <label priority='-9'/>
-        <repeatedSymbol fill='ncsred+0.3yellow' opacity='0.8' gap='0' maxScale='1500000' path='#location-arrow'/>
+        <line width='27m@6000_180m@40000,18pt'/>
+        <if exp='ROUTE_PROFILE!="cycle" and ROUTE_PROFILE!="walk" and ROUTE_PROFILE!="hike"'>
+            <repeatedSymbol fill='ncsred+0.3yellow' opacity='0.8' gap='0' maxScale='1500000' path='#location-arrow'/>
+        </if>
+        <if exp='ROUTE_PROFILE=="cycle"'>
+            <repeatedSymbol fill='ncsblue' opacity='0.8' gap='0' maxScale='1500000' path='#location-arrow'/>
+        </if>
+        <if exp='ROUTE_PROFILE=="walk" || ROUTE_PROFILE=="hike"'>
+            <repeatedSymbol fill='ncsgreen' opacity='0.8' gap='0' maxScale='1500000' path='#location-arrow'/>
+        </if>
     </layer>
     <layer name='track' roadflags='#F000'>
         <line fill='purple' width='0.5pt'/>
