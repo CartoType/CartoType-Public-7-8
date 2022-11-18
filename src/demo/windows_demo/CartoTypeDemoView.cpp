@@ -1133,9 +1133,15 @@ void CCartoTypeDemoView::OnMouseMove(UINT /*nFlags*/,CPoint point)
             iFramework->ConvertPoint(iMapDragAnchorInMapCoords.iX,iMapDragAnchorInMapCoords.iY,CartoType::TCoordType::Display,CartoType::TCoordType::Map);
             }
 
-        CDC* dc = GetDC();
-        if (dc)
-            OnDraw(dc);
+        if (!iMapRenderer)
+            {
+            CDC* dc = GetDC();
+            if (dc)
+                {
+                OnDraw(dc);
+                ReleaseDC(dc);
+                }
+            }
         }
     }
 
